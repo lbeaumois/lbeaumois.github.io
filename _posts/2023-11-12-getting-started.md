@@ -1,6 +1,6 @@
 ---
 title: Getting Started
-author: Beaumois
+author: beaumois
 date: 2023-11-12 22:30:00 +0800
 categories: [Blogging, Tech]
 tags: [getting started]
@@ -10,9 +10,9 @@ img_path: '/posts/20231112'
 
 
 > This is work in progress.
-{: .prompt-warning }
+{: .prompt-info }
 
-## Her comes the sun
+## Here comes the sun
 
 Follow the instructions in the [Jekyll Docs](https://jekyllrb.com/docs/installation/) to complete the installation of the basic environment. [Git](https://git-scm.com/) also needs to be installed.
 

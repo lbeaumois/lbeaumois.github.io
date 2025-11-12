@@ -4,6 +4,8 @@ source "https://rubygems.org"
 
 gemspec
 
+gem "jekyll-polyglot", "~> 1.8"
+
 group :test do
   gem "html-proofer", "~> 4.4"
 end

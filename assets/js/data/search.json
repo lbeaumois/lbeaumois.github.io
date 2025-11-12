@@ -3,34 +3,21 @@ layout: compress
 swcache: true
 ---
 
+{% assign tabs = site.tabs | where_exp: "item", "item.title" %}
+{% assign all_items = tabs | concat: site.posts %}
+
 [
-  {% for tab in site.tabs %}
+  {% for item in all_items %}
   {
-    "title": {{ tab.title | default: tab.name | jsonify }},
-    "url": {{ tab.url | relative_url | jsonify }},
-    "categories": "",
-    "tags": "",
-    "date": "",
-    {% include no-linenos.html content=tab.content %}
+    "title": {{ item.title | jsonify }},
+    "url": {{ item.url | relative_url | jsonify }},
+    "categories": "{{ item.categories | join: ', ' }}",
+    "tags": "{{ item.tags | join: ', ' }}",
+    "date": "{{ item.date }}",
+    {% include no-linenos.html content=item.content %}
     {% assign _content = content | strip_html | strip_newlines %}
     "snippet": {{ _content | truncate: 200 | jsonify }},
     "content": {{ _content | jsonify }}
   }{% unless forloop.last %},{% endunless %}
   {% endfor %}
-  {% if site.posts.size > 0 %}
-  ,
-  {% for post in site.posts %}
-  {
-    "title": {{ post.title | jsonify }},
-    "url": {{ post.url | relative_url | jsonify }},
-    "categories": {{ post.categories | join: ', ' | jsonify }},
-    "tags": {{ post.tags | join: ', ' | jsonify }},
-    "date": "{{ post.date }}",
-    {% include no-linenos.html content=post.content %}
-    {% assign _content = content | strip_html | strip_newlines %}
-    "snippet": {{ _content | truncate: 200 | jsonify }},
-    "content": {{ _content | jsonify }}
-  }{% unless forloop.last %},{% endunless %}
-  {% endfor %}
-  {% endif %}
 ]

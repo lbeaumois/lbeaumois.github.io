@@ -182,6 +182,7 @@ exclude:
   - LICENSE
   - rollup.config.js
   - package*.json
+  - _disabled_content
 
 # Disabled until blog posts are published
 # jekyll-archives:

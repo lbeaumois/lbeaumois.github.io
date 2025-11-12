@@ -1,0 +1,91 @@
+---
+layout: page
+icon: fas fa-home
+order: 0
+title: Home
+---
+
+## Transform Your Business with Expert Leadership & Cutting-Edge AI
+
+Are you a B2B SaaS scale-up or Financial Services firm navigating critical growth challenges? I provide the executive leadership, strategic guidance, and technical expertise you need to drive revenue growth, operational excellence, and competitive advantage.
+
+### How I Can Help You
+
+#### 🎯 [Strategic Advisory](/strategic_advisory/)
+
+**Navigate your most critical business decisions with confidence.**
+
+From pricing strategy and fundraising to M&A execution and sales transformation, I help you make the strategic moves that define your trajectory. Whether you're planning a pivot, preparing for Series B, or scaling internationally, I bring proven expertise from SAP's Winners' Circle and high-growth environments.
+
+**Key services:** Strategy & Pivot Planning • Pricing Strategy • Fundraising Advisory • M&A & Acquisitions • ERP Implementation • Sales Transformation
+
+[Explore Strategic Advisory →](/strategic_advisory/)
+
+---
+
+#### 👔 [Interim/Fractional CXO](/interim_fractional_cxo/)
+
+**Get C-level expertise without the full-time commitment.**
+
+Scale-ups need senior leadership during critical phases—but may not need a permanent executive. I step into CEO, CTO, COO, or CRO roles (full-time or fractional) to drive results during transitions, growth spurts, or transformation initiatives. I also serve on boards of startups and scale-ups.
+
+**Executive roles:** Interim CEO/CTO/COO/CRO • Board Member • Crisis Management • Transformation Leadership
+
+[Explore Interim/Fractional CXO →](/interim_fractional_cxo/)
+
+---
+
+#### 🤖 [Agentic AI / MCP](/agentic_ai/)
+
+**Harness autonomous AI agents to revolutionize your operations.**
+
+The future isn't just AI—it's autonomous agents that reason, plan, and act independently. I help you understand, adopt, and build agentic AI systems including single agents, multi-agent orchestras, and Model Context Protocol (MCP) servers. From strategy to implementation, I guide you through the AI transformation.
+
+**AI expertise:** AI Strategy & Roadmap • Team Enablement & Training • Single Agent Systems • Multi-Agent Orchestration • MCP Server Development
+
+[Explore Agentic AI / MCP →](/agentic_ai/)
+
+---
+
+#### 💻 [Software Development](/software_development/)
+
+**Build and scale software that drives business value.**
+
+From MVP to enterprise-scale platforms, I provide hands-on technical leadership and custom development for B2B SaaS and Financial Services companies. Whether you need to modernize legacy systems, scale your infrastructure, or build new products, I deliver solutions that work.
+
+**Development services:** Custom Software Development • Technical Architecture • Engineering Leadership • Cloud Migration • DevOps & Infrastructure
+
+[Explore Software Development →](/software_development/)
+
+---
+
+### Why Work With Me
+
+**Operator, Not Just Advisor**
+I don't just consult—I execute. I've closed €3M+ deals, led transformations, and built teams in hypergrowth environments.
+
+**Scale-Up DNA**
+My sweet spot is Series A-C companies navigating the messy middle between startup chaos and enterprise discipline.
+
+**Dual Expertise**
+Deep experience in both **B2B SaaS** business models and **Financial Services** regulatory environments gives me unique perspective on complex challenges.
+
+**Cutting-Edge AI**
+I'm at the forefront of agentic AI and MCP development—helping you leverage technology that's reshaping industries.
+
+**Global Perspective**
+Experience across EMEA and Americas with fluency in French, English, and Spanish.
+
+---
+
+### Ready to Scale?
+
+Whether you need strategic guidance, executive leadership, AI transformation, or technical expertise—I'm here to help.
+
+**[Learn more about me →](/about/)**
+
+**[Connect on LinkedIn](https://www.linkedin.com/in/beaumois/)** to start the conversation.
+
+---
+
+*Laurent Beaumois • Agentic AI Expert & Tech CxO • Boston, MA & Europe*

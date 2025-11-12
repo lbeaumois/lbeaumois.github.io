@@ -2,9 +2,10 @@
 # the default layout is 'page'
 icon: fas fa-user-tie
 order: 2
+title: Interim/Fractional CXO
 ---
 
-## Interim / Fractional CXO
+## Interim/Fractional CXO
 
 Scale-ups face a unique challenge: they need C-level expertise to navigate critical growth phases, but may not need or be able to afford a full-time executive. I provide experienced, hands-on leadership to help companies bridge that gap.
 

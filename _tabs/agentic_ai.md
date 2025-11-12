@@ -2,9 +2,10 @@
 # the default layout is 'page'
 icon: fas fa-robot
 order: 3
+title: Agentic AI / MCP
 ---
 
-## Agentic AI
+## Agentic AI / MCP
 
 The future of business automation isn't just AI—it's **autonomous AI agents** that can reason, plan, and act independently. I help B2B SaaS companies and Financial Services firms harness agentic AI to drive competitive advantage and operational efficiency.
 

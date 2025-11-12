@@ -2,6 +2,7 @@
 # the default layout is 'page'
 icon: fas fa-chess
 order: 5
+title: Strategic Advisory
 ---
 
 ## Strategic Advisory

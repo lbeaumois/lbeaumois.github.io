@@ -120,6 +120,10 @@ default_lang: "en"
 exclude_from_localization: ["assets", "admin"]
 parallel_localization: false
 
+# Plugins
+plugins:
+  - jekyll-polyglot
+
 # ------------ The following options are not recommended to be modified ------------------
 
 kramdown:

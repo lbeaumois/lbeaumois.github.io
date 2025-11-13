@@ -6,6 +6,35 @@ export const languages = {
 
 export const defaultLang = 'en';
 
+// URL mappings for SEO-friendly translated URLs
+export const urlMappings = {
+  'about': {
+    en: 'about',
+    fr: 'a-propos',
+    es: 'acerca-de'
+  },
+  'strategic-advisory': {
+    en: 'strategic-advisory',
+    fr: 'conseil-strategique',
+    es: 'asesoria-estrategica'
+  },
+  'interim-cxo': {
+    en: 'interim-cxo',
+    fr: 'interim-cxo',
+    es: 'cxo-interino'
+  },
+  'agentic-ai': {
+    en: 'agentic-ai',
+    fr: 'ia-agentique',
+    es: 'ia-agentica'
+  },
+  'software-development': {
+    en: 'software-development',
+    fr: 'developpement-logiciel',
+    es: 'desarrollo-software'
+  }
+} as const;
+
 export const ui = {
   en: {
     'site.title': 'Laurent Beaumois',

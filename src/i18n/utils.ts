@@ -1,4 +1,4 @@
-import { ui, defaultLang } from './ui';
+import { ui, defaultLang, urlMappings } from './ui';
 
 export type Lang = keyof typeof ui;
 
@@ -18,13 +18,20 @@ export function getLocalizedPath(path: string, lang: Lang): string {
   // Remove leading slash if present
   const cleanPath = path.startsWith('/') ? path.slice(1) : path;
 
-  // If default language, return path without language prefix
-  if (lang === defaultLang) {
-    return `/${cleanPath}`;
+  // If empty path (homepage), just return language prefix
+  if (!cleanPath) {
+    return lang === defaultLang ? '/' : `/${lang}/`;
   }
 
-  // For other languages, add language prefix
-  return `/${lang}/${cleanPath}`;
+  // Check if we have a URL mapping for this path
+  const pathKey = cleanPath as keyof typeof urlMappings;
+  if (pathKey in urlMappings) {
+    const translatedPath = urlMappings[pathKey][lang];
+    return lang === defaultLang ? `/${translatedPath}` : `/${lang}/${translatedPath}`;
+  }
+
+  // Fallback: return path as-is with language prefix
+  return lang === defaultLang ? `/${cleanPath}` : `/${lang}/${cleanPath}`;
 }
 
 export function getAlternateLinks(currentPath: string, currentLang: Lang) {

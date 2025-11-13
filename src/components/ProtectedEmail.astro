@@ -1,0 +1,111 @@
+---
+// Protected email component with anti-scraping measures
+// Email is encoded and only revealed on client-side interaction
+---
+
+<a
+  href="#"
+  class="protected-email text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center gap-2"
+  data-user="laurent"
+  data-domain="beaumois"
+  data-tld="com"
+  aria-label="Send email"
+>
+  <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+  </svg>
+  <span class="email-text">Email</span>
+</a>
+
+<script>
+  // Anti-scraping email protection
+  // Decodes and reveals email only on user interaction
+  function initProtectedEmails() {
+    const protectedEmails = document.querySelectorAll('.protected-email');
+
+    protectedEmails.forEach((link) => {
+      const user = link.getAttribute('data-user');
+      const domain = link.getAttribute('data-domain');
+      const tld = link.getAttribute('data-tld');
+
+      if (!user || !domain || !tld) return;
+
+      // Build email address
+      const email = `${user}@${domain}.${tld}`;
+
+      // On hover, show the email address
+      link.addEventListener('mouseenter', () => {
+        const textSpan = link.querySelector('.email-text');
+        if (textSpan && textSpan.textContent === 'Email') {
+          textSpan.textContent = email;
+        }
+      });
+
+      // On mouse leave, hide again (optional - you can remove this to keep it visible after first hover)
+      link.addEventListener('mouseleave', () => {
+        const textSpan = link.querySelector('.email-text');
+        if (textSpan && textSpan.textContent === email) {
+          textSpan.textContent = 'Email';
+        }
+      });
+
+      // On click, open email client
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        // Create mailto link dynamically
+        const mailto = `mailto:${email}`;
+
+        // Open email client
+        window.location.href = mailto;
+
+        // Alternative: open in new window (less common for email)
+        // window.open(mailto, '_blank');
+      });
+
+      // For accessibility: also handle keyboard activation
+      link.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          const mailto = `mailto:${email}`;
+          window.location.href = mailto;
+        }
+      });
+    });
+  }
+
+  // Initialize when DOM is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initProtectedEmails);
+  } else {
+    initProtectedEmails();
+  }
+
+  // Re-initialize on navigation (for SPAs, though Astro builds static pages)
+  document.addEventListener('astro:page-load', initProtectedEmails);
+</script>
+
+<style>
+  /* Make email link look like other contact links */
+  .protected-email {
+    cursor: pointer;
+    user-select: none;
+  }
+
+  /* Prevent text selection to make scraping harder */
+  .protected-email .email-text {
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+  }
+
+  /* Hide from search engines using CSS */
+  .protected-email::before {
+    content: attr(data-user) "@" attr(data-domain) "." attr(data-tld);
+    position: absolute;
+    left: -9999px;
+    opacity: 0;
+    pointer-events: none;
+  }
+</style>

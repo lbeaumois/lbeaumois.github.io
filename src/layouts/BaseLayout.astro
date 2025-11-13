@@ -2,6 +2,7 @@
 import { getLangFromUrl, useTranslations, getLocalizedPath } from '../i18n/utils';
 import type { Lang } from '../i18n/utils';
 import LanguageSwitcher from '../components/LanguageSwitcher.astro';
+import ProtectedEmail from '../components/ProtectedEmail.astro';
 import '../styles/global.css';
 
 interface Props {
@@ -226,6 +227,9 @@ const pageDescription = description || t('site.description');
                   </svg>
                   Twitter
                 </a>
+              </li>
+              <li>
+                <ProtectedEmail />
               </li>
             </ul>
           </div>

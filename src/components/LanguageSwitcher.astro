@@ -1,0 +1,36 @@
+---
+import { languages } from '../i18n/ui';
+import { getLangFromUrl, getLocalizedPath } from '../i18n/utils';
+import type { Lang } from '../i18n/utils';
+
+const currentLang = getLangFromUrl(Astro.url);
+
+// Get the base path without language prefix
+let basePath = Astro.url.pathname;
+for (const lang of Object.keys(languages)) {
+  if (basePath.startsWith(`/${lang}/`)) {
+    basePath = basePath.slice(lang.length + 1);
+    break;
+  }
+}
+
+// Remove trailing slash
+basePath = basePath.endsWith('/') && basePath !== '/' ? basePath.slice(0, -1) : basePath;
+---
+
+<div class="language-switcher flex items-center gap-2">
+  {Object.entries(languages).map(([lang, label]) => (
+    <a
+      href={getLocalizedPath(basePath, lang as Lang)}
+      class:list={[
+        "px-2 py-1 text-sm font-medium transition-colors rounded",
+        currentLang === lang
+          ? "text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-950"
+          : "text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400"
+      ]}
+      aria-current={currentLang === lang ? "page" : undefined}
+    >
+      {lang.toUpperCase()}
+    </a>
+  ))}
+</div>

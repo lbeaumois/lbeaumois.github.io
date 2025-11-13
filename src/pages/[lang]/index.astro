@@ -1,0 +1,160 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { useTranslations, getLocalizedPath } from '../../i18n/utils';
+import type { Lang } from '../../i18n/utils';
+
+export function getStaticPaths() {
+  return [
+    {params: {lang: 'fr'}},
+    {params: {lang: 'es'}},
+  ];
+}
+
+const { lang } = Astro.params as { lang: Lang };
+const t = useTranslations(lang);
+---
+
+<BaseLayout>
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-900 dark:to-slate-800 py-20 md:py-32">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-4xl md:text-6xl font-bold text-slate-900 dark:text-white mb-6">
+          {t('home.hero.title')}
+        </h1>
+        <p class="text-xl md:text-2xl text-slate-600 dark:text-slate-300 mb-8 leading-relaxed">
+          {t('home.hero.subtitle')}
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a
+            href="https://www.linkedin.com/in/beaumois/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center justify-center px-8 py-3 text-base font-medium text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors shadow-lg hover:shadow-xl"
+          >
+            {t('footer.connect')}
+          </a>
+          <a
+            href={getLocalizedPath('/about', lang)}
+            class="inline-flex items-center justify-center px-8 py-3 text-base font-medium text-slate-700 dark:text-slate-300 bg-white dark:bg-slate-800 hover:bg-slate-50 dark:hover:bg-slate-700 rounded-lg transition-colors border border-slate-300 dark:border-slate-600"
+          >
+            {t('learnmore')}
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="py-20 bg-white dark:bg-slate-900">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
+          {t('home.services.title')}
+        </h2>
+        <p class="text-xl text-slate-600 dark:text-slate-400">
+          {t('home.services.subtitle')}
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+        <a href={getLocalizedPath('/strategic-advisory', lang)} class="group p-8 bg-slate-50 dark:bg-slate-800 rounded-xl hover:shadow-xl transition-all duration-300 border border-slate-200 dark:border-slate-700 hover:border-blue-500 dark:hover:border-blue-500">
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+              <svg class="w-6 h-6 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <div class="flex-1">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                {t('service.strategic_advisory.title')}
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                {t('service.strategic_advisory.description')}
+              </p>
+            </div>
+          </div>
+        </a>
+
+        <a href={getLocalizedPath('/interim-cxo', lang)} class="group p-8 bg-slate-50 dark:bg-slate-800 rounded-xl hover:shadow-xl transition-all duration-300 border border-slate-200 dark:border-slate-700 hover:border-blue-500 dark:hover:border-blue-500">
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+              <svg class="w-6 h-6 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+              </svg>
+            </div>
+            <div class="flex-1">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                {t('service.interim_cxo.title')}
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                {t('service.interim_cxo.description')}
+              </p>
+            </div>
+          </div>
+        </a>
+
+        <a href={getLocalizedPath('/agentic-ai', lang)} class="group p-8 bg-slate-50 dark:bg-slate-800 rounded-xl hover:shadow-xl transition-all duration-300 border border-slate-200 dark:border-slate-700 hover:border-blue-500 dark:hover:border-blue-500">
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+              <svg class="w-6 h-6 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+              </svg>
+            </div>
+            <div class="flex-1">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                {t('service.agentic_ai.title')}
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                {t('service.agentic_ai.description')}
+              </p>
+            </div>
+          </div>
+        </a>
+
+        <a href={getLocalizedPath('/software-development', lang)} class="group p-8 bg-slate-50 dark:bg-slate-800 rounded-xl hover:shadow-xl transition-all duration-300 border border-slate-200 dark:border-slate-700 hover:border-blue-500 dark:hover:border-blue-500">
+          <div class="flex items-start gap-4">
+            <div class="flex-shrink-0 w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+              <svg class="w-6 h-6 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+              </svg>
+            </div>
+            <div class="flex-1">
+              <h3 class="text-xl font-semibold text-slate-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                {t('service.software_development.title')}
+              </h3>
+              <p class="text-slate-600 dark:text-slate-400">
+                {t('service.software_development.description')}
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-20 bg-blue-600 dark:bg-blue-700">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">
+          {lang === 'fr' ? 'Prêt à Transformer Votre Entreprise ?' : '¿Listo para Transformar su Negocio?'}
+        </h2>
+        <p class="text-xl text-blue-100 mb-8">
+          {lang === 'fr'
+            ? 'Discutons de comment je peux vous aider à accélérer votre croissance, optimiser vos opérations ou implémenter des solutions IA de pointe.'
+            : 'Hablemos sobre cómo puedo ayudarle a acelerar su crecimiento, optimizar operaciones o implementar soluciones de IA de vanguardia.'
+          }
+        </p>
+        <a
+          href="https://www.linkedin.com/in/beaumois/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center px-8 py-3 text-base font-medium text-blue-600 bg-white hover:bg-blue-50 rounded-lg transition-colors shadow-lg hover:shadow-xl"
+        >
+          {lang === 'fr' ? 'Contactez-moi' : 'Contácteme'}
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

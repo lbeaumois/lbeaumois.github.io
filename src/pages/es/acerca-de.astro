@@ -8,12 +8,25 @@ const description = 'Conozca más sobre Laurent Beaumois - ejecutivo experimenta
 <BaseLayout title={title} description={description} lang="es">
   <article class="py-12 bg-white dark:bg-slate-900">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
-      <h1 class="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-8">Acerca de Laurent Beaumois</h1>
+      <!-- Header with Photo -->
+      <div class="flex flex-col md:flex-row gap-8 items-start mb-12">
+        <div class="flex-shrink-0">
+          <img
+            src="/images/laurent-beaumois.jpg"
+            alt="Laurent Beaumois - Ejecutivo B2B SaaS y Experto en IA Agéntica"
+            class="w-48 h-48 md:w-64 md:h-64 rounded-lg object-cover shadow-xl"
+            loading="eager"
+          />
+        </div>
+        <div class="flex-1">
+          <h1 class="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">Acerca de Laurent Beaumois</h1>
+          <p class="text-xl text-slate-600 dark:text-slate-400 leading-relaxed">
+            Conecto estrategia, tecnología y sistemas de IA autónomos para reinventar cómo las empresas operan y escalan. Como ejecutivo experimentado de B2B SaaS y asesor estratégico, ayudo a scale-ups y empresas en etapa de crecimiento a impulsar crecimiento de ingresos, excelencia operacional y valor para inversores.
+          </p>
+        </div>
+      </div>
 
       <div class="prose prose-lg dark:prose-invert max-w-none">
-        <p class="text-xl text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
-          Conecto estrategia, tecnología y sistemas de IA autónomos para reinventar cómo las empresas operan y escalan. Como ejecutivo experimentado de B2B SaaS y asesor estratégico, ayudo a scale-ups y empresas en etapa de crecimiento a impulsar crecimiento de ingresos, excelencia operacional y valor para inversores.
-        </p>
 
         <h2 class="text-2xl font-bold text-slate-900 dark:text-white mt-12 mb-4">Lo que Hago</h2>
         <p>Proporciono liderazgo ejecutivo operacional y experiencia especializada en IA para empresas de rápido crecimiento:</p>

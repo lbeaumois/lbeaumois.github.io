@@ -8,12 +8,25 @@ const description = 'Learn more about Laurent Beaumois - experienced B2B SaaS ex
 <BaseLayout title={title} description={description}>
   <article class="py-12 bg-white dark:bg-slate-900">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
-      <h1 class="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-8">About Laurent Beaumois</h1>
+      <!-- Header with Photo -->
+      <div class="flex flex-col md:flex-row gap-8 items-start mb-12">
+        <div class="flex-shrink-0">
+          <img
+            src="/images/laurent-beaumois.jpg"
+            alt="Laurent Beaumois - B2B SaaS Executive and Agentic AI Expert"
+            class="w-48 h-48 md:w-64 md:h-64 rounded-lg object-cover shadow-xl"
+            loading="eager"
+          />
+        </div>
+        <div class="flex-1">
+          <h1 class="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">About Laurent Beaumois</h1>
+          <p class="text-xl text-slate-600 dark:text-slate-400 leading-relaxed">
+            I bridge strategy, technology, and autonomous AI systems to reinvent how companies operate and scale. As an experienced B2B SaaS executive and strategic advisor, I help scale-ups and growth-stage companies drive revenue growth, operational excellence, and investor value.
+          </p>
+        </div>
+      </div>
 
       <div class="prose prose-lg dark:prose-invert max-w-none">
-        <p class="text-xl text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
-          I bridge strategy, technology, and autonomous AI systems to reinvent how companies operate and scale. As an experienced B2B SaaS executive and strategic advisor, I help scale-ups and growth-stage companies drive revenue growth, operational excellence, and investor value.
-        </p>
 
         <h2 class="text-2xl font-bold text-slate-900 dark:text-white mt-12 mb-4">What I Do</h2>
         <p>I provide hands-on executive leadership and specialized AI expertise to fast-growing companies:</p>

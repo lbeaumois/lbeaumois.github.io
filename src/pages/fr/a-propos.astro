@@ -8,12 +8,25 @@ const description = 'En savoir plus sur Laurent Beaumois - dirigeant B2B SaaS ex
 <BaseLayout title={title} description={description} lang="fr">
   <article class="py-12 bg-white dark:bg-slate-900">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
-      <h1 class="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-8">À Propos de Laurent Beaumois</h1>
+      <!-- Header with Photo -->
+      <div class="flex flex-col md:flex-row gap-8 items-start mb-12">
+        <div class="flex-shrink-0">
+          <img
+            src="/images/laurent-beaumois.jpg"
+            alt="Laurent Beaumois - Dirigeant B2B SaaS et Expert en IA Agentique"
+            class="w-48 h-48 md:w-64 md:h-64 rounded-lg object-cover shadow-xl"
+            loading="eager"
+          />
+        </div>
+        <div class="flex-1">
+          <h1 class="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">À Propos de Laurent Beaumois</h1>
+          <p class="text-xl text-slate-600 dark:text-slate-400 leading-relaxed">
+            Je fais le pont entre stratégie, technologie et systèmes IA autonomes pour réinventer la façon dont les entreprises opèrent et scalent. En tant que dirigeant B2B SaaS expérimenté et conseiller stratégique, j'aide les scale-ups et entreprises en croissance à générer croissance du revenu, excellence opérationnelle et valeur investisseur.
+          </p>
+        </div>
+      </div>
 
       <div class="prose prose-lg dark:prose-invert max-w-none">
-        <p class="text-xl text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
-          Je fais le pont entre stratégie, technologie et systèmes IA autonomes pour réinventer la façon dont les entreprises opèrent et scalent. En tant que dirigeant B2B SaaS expérimenté et conseiller stratégique, j'aide les scale-ups et entreprises en croissance à générer croissance du revenu, excellence opérationnelle et valeur investisseur.
-        </p>
 
         <h2 class="text-2xl font-bold text-slate-900 dark:text-white mt-12 mb-4">Ce que je Fais</h2>
         <p>Je fournis un leadership exécutif opérationnel et une expertise IA spécialisée aux entreprises en croissance rapide :</p>

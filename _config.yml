@@ -117,8 +117,8 @@ baseurl: ""
 # Multilingual settings (jekyll-polyglot)
 languages: ["en", "fr"]
 default_lang: "en"
-exclude_from_localization: ["assets", "admin"]
-parallel_localization: false
+exclude_from_localization: ["assets", "admin", "css", "js", "javascript"]
+parallel_localization: true
 
 # Plugins
 plugins:

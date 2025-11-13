@@ -2,6 +2,7 @@
 # the default layout is 'page'
 icon: fas fa-robot
 order: 3
+lang: en
 title: Agentic AI / MCP
 ---
 

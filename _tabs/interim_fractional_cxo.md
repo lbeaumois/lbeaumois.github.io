@@ -2,6 +2,7 @@
 # the default layout is 'page'
 icon: fas fa-user-tie
 order: 2
+lang: en
 title: Interim/Fractional CXO
 ---
 

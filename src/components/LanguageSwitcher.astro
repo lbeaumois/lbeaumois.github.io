@@ -1,11 +1,11 @@
 ---
 import { languages } from '../i18n/ui';
-import { getLangFromUrl, getLocalizedPath } from '../i18n/utils';
+import { getLangFromUrl, getLocalizedPath, getCanonicalPath } from '../i18n/utils';
 import type { Lang } from '../i18n/utils';
 
 const currentLang = getLangFromUrl(Astro.url);
 
-// Get the base path without language prefix
+// Get the path without language prefix (may still use a localized slug)
 let basePath = Astro.url.pathname;
 for (const lang of Object.keys(languages)) {
   if (basePath.startsWith(`/${lang}/`)) {
@@ -16,12 +16,16 @@ for (const lang of Object.keys(languages)) {
 
 // Remove trailing slash
 basePath = basePath.endsWith('/') && basePath !== '/' ? basePath.slice(0, -1) : basePath;
+
+// Resolve the localized slug back to its canonical key so it can be
+// re-localized correctly into every other language.
+const canonicalPath = getCanonicalPath(basePath, currentLang);
 ---
 
 <div class="language-switcher flex items-center gap-2">
   {Object.entries(languages).map(([lang, label]) => (
     <a
-      href={getLocalizedPath(basePath, lang as Lang)}
+      href={getLocalizedPath(canonicalPath, lang as Lang)}
       class:list={[
         "px-2 py-1 text-sm font-medium transition-colors rounded",
         currentLang === lang

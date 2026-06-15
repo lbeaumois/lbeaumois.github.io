@@ -1,0 +1,59 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const title = 'MeetLoyd';
+const description = 'MeetLoyd — the platform for the agentic era. Enterprise teams of AI agents: manifest-driven, MCP-native, and governed from day one. Founded by Laurent Beaumois.';
+---
+
+<BaseLayout title={title} description={description}>
+  <article class="py-12 bg-white dark:bg-slate-900">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+      <p class="text-sm font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400 mb-3">The platform for the agentic era</p>
+      <h1 class="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">MeetLoyd</h1>
+
+      <div class="prose prose-lg dark:prose-invert max-w-none">
+        <p class="text-xl text-slate-600 dark:text-slate-400 leading-relaxed mb-8">
+          MeetLoyd is the enterprise platform where organizations compose, govern, and operate <strong>teams</strong> of AI agents at scale — not individual chatbots. Teams are manifest-driven, hierarchically organized, protocol-native, and governed from day one.
+        </p>
+
+        <blockquote class="border-l-4 border-blue-600 pl-4 italic text-slate-700 dark:text-slate-300">
+          "Think Salesforce for the agentic era — without the 12-month implementation."
+        </blockquote>
+
+        <h2 class="text-2xl font-bold mt-12 mb-4">Why MeetLoyd is different</h2>
+        <p>Most agent tools deploy a single bot. MeetLoyd runs organizations. A C-Suite team coordinates department teams; department teams coordinate specialists. Every team is defined in a manifest, deployed in one click, and started through a structured wizard — charter, briefing cascade, agent handshakes — before any agent touches production work.</p>
+
+        <div class="grid md:grid-cols-2 gap-6 my-8 not-prose">
+          <div class="bg-slate-50 dark:bg-slate-800 p-6 rounded-lg">
+            <h3 class="text-lg font-semibold mb-2 text-slate-900 dark:text-white">Team-first</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400">Manifest-driven agent teams composed hierarchically — C-Suite, Sales, Finance, Engineering, Compliance and more, from a catalog of ready-to-deploy templates.</p>
+          </div>
+          <div class="bg-slate-50 dark:bg-slate-800 p-6 rounded-lg">
+            <h3 class="text-lg font-semibold mb-2 text-slate-900 dark:text-white">Governance-native</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400">Compliance packs (GDPR, HIPAA, EU AI Act, SOX, DORA, ISO 42001…), cascading policy, kill switch, four-eyes approval, and a constraint solver that enforces rules at runtime.</p>
+          </div>
+          <div class="bg-slate-50 dark:bg-slate-800 p-6 rounded-lg">
+            <h3 class="text-lg font-semibold mb-2 text-slate-900 dark:text-white">Protocol-native</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400">Built on open standards: MCP for agent-to-tool, SLIM &amp; A2A for agent-to-agent, AGNTCY for cross-org federation. Competitors retrofit protocols; MeetLoyd was designed around them.</p>
+          </div>
+          <div class="bg-slate-50 dark:bg-slate-800 p-6 rounded-lg">
+            <h3 class="text-lg font-semibold mb-2 text-slate-900 dark:text-white">Data sovereignty</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400">Bring your own keys and your own storage. Customer-managed encryption (CMEK) and customer-owned storage (BYOS) so sensitive data never has to touch the platform's infrastructure.</p>
+          </div>
+        </div>
+
+        <h2 class="text-2xl font-bold mt-12 mb-4">Built for regulated, high-trust buyers</h2>
+        <p>Enterprise buyers cannot operate with black-box agents. They need to know what agents are doing, why, and under what constraints. MeetLoyd makes that structural — with full agent identity (IETF, SPIFFE, Verifiable Credentials, TBAC), fine-grained authorization on every tool call, an LLM gateway that handles prompt-injection and PII, and a hash-chain audit log with SIEM export.</p>
+        <p>The primary beachhead is regulated and high-trust sectors — financial services, healthcare, and any enterprise facing EU AI Act obligations — and the <strong>system integrators and IT services firms</strong> who serve them.</p>
+
+        <div class="mt-12 p-8 bg-slate-900 dark:bg-slate-950 rounded-lg text-center not-prose">
+          <h3 class="text-2xl font-bold mb-3 text-white">See the platform</h3>
+          <p class="mb-6 text-slate-300">Explore MeetLoyd, register, or book a guided proof of concept.</p>
+          <a href="https://meetloyd.com" target="_blank" rel="noopener noreferrer" class="inline-block px-8 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors">
+            Go to meetloyd.com
+          </a>
+        </div>
+      </div>
+    </div>
+  </article>
+</BaseLayout>

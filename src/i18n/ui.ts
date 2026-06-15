@@ -13,6 +13,11 @@ export const urlMappings = {
     fr: 'a-propos',
     es: 'acerca-de'
   },
+  'meetloyd': {
+    en: 'meetloyd',
+    fr: 'meetloyd',
+    es: 'meetloyd'
+  },
   'strategic-advisory': {
     en: 'strategic-advisory',
     fr: 'conseil-strategique',
@@ -38,21 +43,23 @@ export const urlMappings = {
 export const ui = {
   en: {
     'site.title': 'Laurent Beaumois',
-    'site.tagline': 'Agentic AI expert & Tech CXO',
-    'site.description': 'Experienced B2B SaaS Executive | Strategic Advisor | Interim CXO - Driving Revenue Growth, Operational Excellence, and Investor Value',
+    'site.tagline': 'Founder of MeetLoyd · Board-level agentic AI advisor to SI & IT services firms',
+    'site.description': 'Laurent Beaumois — founder of MeetLoyd, the platform for the agentic era, and board-level advisor helping system integrators and IT services firms win the shift to agentic AI. UN ITU SG17 Agentic AI Security Expert.',
 
     // Navigation
     'nav.home': 'Home',
     'nav.about': 'About',
-    'nav.services': 'Services',
-    'nav.strategic_advisory': 'Strategic Advisory',
+    'nav.services': 'Work with me',
+    'nav.meetloyd': 'MeetLoyd',
+    'nav.strategic_advisory': 'Board Advisory',
     'nav.interim_cxo': 'Interim/Fractional CXO',
     'nav.agentic_ai': 'Agentic AI / MCP',
     'nav.software_development': 'Software Development',
+    'nav.more': 'More services',
 
     // Footer
     'footer.contact': 'Contact',
-    'footer.connect': 'Connect with me on LinkedIn',
+    'footer.connect': 'Connect on LinkedIn',
     'footer.rights': 'All rights reserved',
 
     // Common UI
@@ -63,38 +70,53 @@ export const ui = {
     'contact': 'Contact',
 
     // Home page
-    'home.hero.title': 'Bridging Strategy, Technology & Autonomous AI',
-    'home.hero.subtitle': 'I help B2B SaaS scale-ups and growth-stage companies drive revenue growth, operational excellence, and investor value through strategic leadership and cutting-edge AI implementation.',
-    'home.services.title': 'Services',
-    'home.services.subtitle': 'Comprehensive expertise for your growth journey',
+    'home.hero.title': 'All in on agentic AI',
+    'home.hero.subtitle': 'I build MeetLoyd — the platform for the agentic era — and advise the boards of system integrators and IT services firms on turning agentic AI into revenue, governance, and a durable competitive edge.',
+    'home.services.title': 'How I work',
+    'home.services.subtitle': 'One platform, one board-level advisory practice — both focused on the agentic shift',
+
+    // Home — MeetLoyd feature band
+    'home.meetloyd.eyebrow': 'The platform',
+    'home.meetloyd.title': 'MeetLoyd — the platform for the agentic era',
+    'home.meetloyd.body': 'Enterprise teams of AI agents — manifest-driven, MCP-native, and governed from day one. Compose, govern, and operate agent teams at scale, with the identity, compliance, and data-sovereignty controls regulated buyers actually require.',
+    'home.meetloyd.cta': 'Visit meetloyd.com',
+
+    // Home — CTA section
+    'home.cta.title': 'Exploring agentic AI for your firm?',
+    'home.cta.subtitle': 'Whether you want to deploy agent teams with MeetLoyd or set your agentic strategy at board level, let\'s talk.',
+    'home.cta.button': 'Get in touch',
 
     // Service cards
-    'service.strategic_advisory.title': 'Strategic Advisory',
-    'service.strategic_advisory.description': 'Navigate critical strategic decisions with experience from SAP Winners\' Circle and leading digital transformation.',
+    'service.meetloyd.title': 'MeetLoyd',
+    'service.meetloyd.description': 'The platform for the agentic era — enterprise AI agent teams, MCP-native and governed from day one.',
+    'service.strategic_advisory.title': 'Board Advisory for SI & IT Services',
+    'service.strategic_advisory.description': 'Helping system integrators and IT services firms set agentic strategy, governance, and a credible offering — at board level.',
     'service.interim_cxo.title': 'Interim/Fractional CXO',
     'service.interim_cxo.description': 'Hands-on C-level leadership to bridge critical growth phases - CEO, CTO, COO, or CRO roles.',
     'service.agentic_ai.title': 'Agentic AI / MCP',
-    'service.agentic_ai.description': 'Harness autonomous AI agents for competitive advantage - strategy, training, and bespoke development.',
+    'service.agentic_ai.description': 'Hands-on delivery: agent strategy, enablement, and bespoke multi-agent and MCP systems.',
     'service.software_development.title': 'Software Development',
     'service.software_development.description': 'Custom software solutions and technical leadership for B2B SaaS and Financial Services firms.',
   },
   fr: {
     'site.title': 'Laurent Beaumois',
-    'site.tagline': 'Expert en IA Agentique & CxO Tech',
-    'site.description': 'Cadre B2B SaaS expérimenté | Conseiller stratégique | CXO intérimaire - Croissance des revenus, excellence opérationnelle et valeur pour les investisseurs',
+    'site.tagline': 'Fondateur de MeetLoyd · Conseil en IA agentique au board des ESN et sociétés de services IT',
+    'site.description': 'Laurent Beaumois — fondateur de MeetLoyd, la plateforme de l\'ère agentique, et conseil au niveau board pour aider les ESN et sociétés de services IT à réussir le virage de l\'IA agentique. Expert Sécurité IA Agentique à l\'UIT-ONU (SG17).',
 
     // Navigation
     'nav.home': 'Accueil',
     'nav.about': 'À Propos',
-    'nav.services': 'Services',
-    'nav.strategic_advisory': 'Conseil Stratégique',
+    'nav.services': 'Travailler avec moi',
+    'nav.meetloyd': 'MeetLoyd',
+    'nav.strategic_advisory': 'Conseil au Board',
     'nav.interim_cxo': 'Direction Générale Intérimaire/Fractionnée',
-    'nav.agentic_ai': 'Agentic AI / MCP',
+    'nav.agentic_ai': 'IA Agentique / MCP',
     'nav.software_development': 'Développement Logiciel',
+    'nav.more': 'Autres services',
 
     // Footer
     'footer.contact': 'Contact',
-    'footer.connect': 'Connectez-vous avec moi sur LinkedIn',
+    'footer.connect': 'Me contacter sur LinkedIn',
     'footer.rights': 'Tous droits réservés',
 
     // Common UI
@@ -105,38 +127,53 @@ export const ui = {
     'contact': 'Contact',
 
     // Home page
-    'home.hero.title': 'Pont entre Stratégie, Technologie & IA Autonome',
-    'home.hero.subtitle': 'J\'aide les scale-ups B2B SaaS et les entreprises en croissance à accélérer leur chiffre d\'affaires, leur excellence opérationnelle et leur valeur pour les investisseurs grâce à un leadership stratégique et une implémentation IA de pointe.',
-    'home.services.title': 'Services',
-    'home.services.subtitle': 'Expertise complète pour votre parcours de croissance',
+    'home.hero.title': 'Pleinement engagé dans l\'IA agentique',
+    'home.hero.subtitle': 'Je développe MeetLoyd — la plateforme de l\'ère agentique — et j\'accompagne les boards des ESN et sociétés de services IT pour transformer l\'IA agentique en revenus, en gouvernance et en avantage concurrentiel durable.',
+    'home.services.title': 'Comment je travaille',
+    'home.services.subtitle': 'Une plateforme, une pratique de conseil au board — toutes deux centrées sur le virage agentique',
+
+    // Home — MeetLoyd feature band
+    'home.meetloyd.eyebrow': 'La plateforme',
+    'home.meetloyd.title': 'MeetLoyd — la plateforme de l\'ère agentique',
+    'home.meetloyd.body': 'Des équipes d\'agents IA pour l\'entreprise — pilotées par manifeste, nativement MCP et gouvernées dès le premier jour. Composez, gouvernez et opérez des équipes d\'agents à grande échelle, avec les contrôles d\'identité, de conformité et de souveraineté des données qu\'exigent réellement les acheteurs régulés.',
+    'home.meetloyd.cta': 'Découvrir meetloyd.com',
+
+    // Home — CTA section
+    'home.cta.title': 'Vous explorez l\'IA agentique pour votre entreprise ?',
+    'home.cta.subtitle': 'Que vous souhaitiez déployer des équipes d\'agents avec MeetLoyd ou définir votre stratégie agentique au niveau du board, discutons-en.',
+    'home.cta.button': 'Me contacter',
 
     // Service cards
-    'service.strategic_advisory.title': 'Conseil Stratégique',
-    'service.strategic_advisory.description': 'Naviguez les décisions stratégiques critiques avec l\'expérience du Winners\' Circle SAP et de la direction de transformation digitale.',
+    'service.meetloyd.title': 'MeetLoyd',
+    'service.meetloyd.description': 'La plateforme de l\'ère agentique — des équipes d\'agents IA pour l\'entreprise, nativement MCP et gouvernées dès le départ.',
+    'service.strategic_advisory.title': 'Conseil au Board pour ESN & Services IT',
+    'service.strategic_advisory.description': 'J\'aide les ESN et sociétés de services IT à définir leur stratégie agentique, leur gouvernance et une offre crédible — au niveau du board.',
     'service.interim_cxo.title': 'Direction Générale Intérimaire/Fractionnée',
     'service.interim_cxo.description': 'Leadership opérationnel de niveau C-suite pour combler les phases de croissance critiques - rôles CEO, CTO, COO ou CRO.',
-    'service.agentic_ai.title': 'Agentic AI / MCP',
-    'service.agentic_ai.description': 'Exploitez les agents IA autonomes pour un avantage concurrentiel - stratégie, formation et développement sur mesure.',
+    'service.agentic_ai.title': 'IA Agentique / MCP',
+    'service.agentic_ai.description': 'Mise en œuvre concrète : stratégie agentique, enablement et systèmes multi-agents et MCP sur mesure.',
     'service.software_development.title': 'Développement Logiciel',
     'service.software_development.description': 'Solutions logicielles sur mesure et leadership technique pour les entreprises B2B SaaS et services financiers.',
   },
   es: {
     'site.title': 'Laurent Beaumois',
-    'site.tagline': 'Experto en IA Agéntica y CxO Tech',
-    'site.description': 'Ejecutivo B2B SaaS experimentado | Asesor estratégico | CXO interino - Impulsando el crecimiento de ingresos, excelencia operacional y valor para inversores',
+    'site.tagline': 'Fundador de MeetLoyd · Asesor de IA agéntica a nivel de junta para integradores y empresas de servicios IT',
+    'site.description': 'Laurent Beaumois — fundador de MeetLoyd, la plataforma de la era agéntica, y asesor a nivel de junta que ayuda a los integradores de sistemas y empresas de servicios IT a ganar el giro hacia la IA agéntica. Experto en Seguridad de IA Agéntica en la UIT-ONU (SG17).',
 
     // Navigation
     'nav.home': 'Inicio',
     'nav.about': 'Acerca de',
-    'nav.services': 'Servicios',
-    'nav.strategic_advisory': 'Asesoría Estratégica',
+    'nav.services': 'Trabaja conmigo',
+    'nav.meetloyd': 'MeetLoyd',
+    'nav.strategic_advisory': 'Asesoría de Junta',
     'nav.interim_cxo': 'CXO Interino/Fraccionado',
     'nav.agentic_ai': 'IA Agéntica / MCP',
     'nav.software_development': 'Desarrollo de Software',
+    'nav.more': 'Más servicios',
 
     // Footer
     'footer.contact': 'Contacto',
-    'footer.connect': 'Conéctate conmigo en LinkedIn',
+    'footer.connect': 'Conéctate en LinkedIn',
     'footer.rights': 'Todos los derechos reservados',
 
     // Common UI
@@ -147,18 +184,31 @@ export const ui = {
     'contact': 'Contacto',
 
     // Home page
-    'home.hero.title': 'Conectando Estrategia, Tecnología e IA Autónoma',
-    'home.hero.subtitle': 'Ayudo a scale-ups B2B SaaS y empresas en crecimiento a impulsar el crecimiento de ingresos, excelencia operacional y valor para inversores a través de liderazgo estratégico e implementación de IA de vanguardia.',
-    'home.services.title': 'Servicios',
-    'home.services.subtitle': 'Experiencia integral para su viaje de crecimiento',
+    'home.hero.title': 'Totalmente enfocado en la IA agéntica',
+    'home.hero.subtitle': 'Desarrollo MeetLoyd — la plataforma de la era agéntica — y asesoro a las juntas de integradores de sistemas y empresas de servicios IT para convertir la IA agéntica en ingresos, gobernanza y una ventaja competitiva duradera.',
+    'home.services.title': 'Cómo trabajo',
+    'home.services.subtitle': 'Una plataforma, una práctica de asesoría a nivel de junta — ambas centradas en el giro agéntico',
+
+    // Home — MeetLoyd feature band
+    'home.meetloyd.eyebrow': 'La plataforma',
+    'home.meetloyd.title': 'MeetLoyd — la plataforma de la era agéntica',
+    'home.meetloyd.body': 'Equipos de agentes de IA para la empresa — definidos por manifiesto, nativos de MCP y gobernados desde el primer día. Componga, gobierne y opere equipos de agentes a escala, con los controles de identidad, cumplimiento y soberanía de datos que los compradores regulados realmente exigen.',
+    'home.meetloyd.cta': 'Visitar meetloyd.com',
+
+    // Home — CTA section
+    'home.cta.title': '¿Explorando la IA agéntica para su empresa?',
+    'home.cta.subtitle': 'Ya sea que quiera desplegar equipos de agentes con MeetLoyd o definir su estrategia agéntica a nivel de junta, hablemos.',
+    'home.cta.button': 'Contáctame',
 
     // Service cards
-    'service.strategic_advisory.title': 'Asesoría Estratégica',
-    'service.strategic_advisory.description': 'Navegue decisiones estratégicas críticas con experiencia del Winners\' Circle de SAP y liderando transformación digital.',
+    'service.meetloyd.title': 'MeetLoyd',
+    'service.meetloyd.description': 'La plataforma de la era agéntica — equipos de agentes de IA para la empresa, nativos de MCP y gobernados desde el inicio.',
+    'service.strategic_advisory.title': 'Asesoría de Junta para Integradores y Servicios IT',
+    'service.strategic_advisory.description': 'Ayudo a integradores de sistemas y empresas de servicios IT a definir su estrategia agéntica, su gobernanza y una oferta creíble — a nivel de junta.',
     'service.interim_cxo.title': 'CXO Interino/Fraccionado',
     'service.interim_cxo.description': 'Liderazgo ejecutivo C-level práctico para fases críticas de crecimiento - roles CEO, CTO, COO o CRO.',
     'service.agentic_ai.title': 'IA Agéntica / MCP',
-    'service.agentic_ai.description': 'Aproveche agentes de IA autónomos para ventaja competitiva - estrategia, capacitación y desarrollo a medida.',
+    'service.agentic_ai.description': 'Ejecución práctica: estrategia agéntica, capacitación y sistemas multiagente y MCP a medida.',
     'service.software_development.title': 'Desarrollo de Software',
     'service.software_development.description': 'Soluciones de software personalizadas y liderazgo técnico para empresas B2B SaaS y servicios financieros.',
   },

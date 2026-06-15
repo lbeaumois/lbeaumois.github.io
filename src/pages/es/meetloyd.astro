@@ -1,0 +1,59 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = 'MeetLoyd';
+const description = 'MeetLoyd — la plataforma de la era agéntica. Equipos de agentes de IA para la empresa: definidos por manifiesto, nativos de MCP y gobernados desde el primer día. Fundada por Laurent Beaumois.';
+---
+
+<BaseLayout title={title} description={description}>
+  <article class="py-12 bg-white dark:bg-slate-900">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+      <p class="text-sm font-semibold uppercase tracking-wider text-blue-600 dark:text-blue-400 mb-3">La plataforma de la era agéntica</p>
+      <h1 class="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-6">MeetLoyd</h1>
+
+      <div class="prose prose-lg dark:prose-invert max-w-none">
+        <p class="text-xl text-slate-600 dark:text-slate-400 leading-relaxed mb-8">
+          MeetLoyd es la plataforma empresarial donde las organizaciones componen, gobiernan y operan <strong>equipos</strong> de agentes de IA a escala — no chatbots individuales. Los equipos se definen por manifiesto, se organizan jerárquicamente, son nativos de protocolo y están gobernados desde el primer día.
+        </p>
+
+        <blockquote class="border-l-4 border-blue-600 pl-4 italic text-slate-700 dark:text-slate-300">
+          «Piense en Salesforce para la era agéntica — sin los 12 meses de implementación.»
+        </blockquote>
+
+        <h2 class="text-2xl font-bold mt-12 mb-4">Por qué MeetLoyd es diferente</h2>
+        <p>La mayoría de las herramientas despliegan un solo bot. MeetLoyd hace funcionar organizaciones. Un equipo directivo coordina los equipos de departamento; los equipos de departamento coordinan a los especialistas. Cada equipo se define en un manifiesto, se despliega con un clic y se inicia mediante un asistente estructurado — carta fundacional, cascada de briefings, apretones de manos entre agentes — antes de que ningún agente toque el trabajo en producción.</p>
+
+        <div class="grid md:grid-cols-2 gap-6 my-8 not-prose">
+          <div class="bg-slate-50 dark:bg-slate-800 p-6 rounded-lg">
+            <h3 class="text-lg font-semibold mb-2 text-slate-900 dark:text-white">El equipo primero</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400">Equipos de agentes definidos por manifiesto y compuestos jerárquicamente — Dirección, Ventas, Finanzas, Ingeniería, Cumplimiento… — desde un catálogo de plantillas listas para desplegar.</p>
+          </div>
+          <div class="bg-slate-50 dark:bg-slate-800 p-6 rounded-lg">
+            <h3 class="text-lg font-semibold mb-2 text-slate-900 dark:text-white">Gobernanza nativa</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400">Paquetes de cumplimiento (RGPD, HIPAA, Ley de IA de la UE, SOX, DORA, ISO 42001…), políticas en cascada, kill switch, aprobación a cuatro ojos y un solucionador de restricciones que aplica las reglas en tiempo de ejecución.</p>
+          </div>
+          <div class="bg-slate-50 dark:bg-slate-800 p-6 rounded-lg">
+            <h3 class="text-lg font-semibold mb-2 text-slate-900 dark:text-white">Nativa de protocolos</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400">Construida sobre estándares abiertos: MCP para agente-a-herramienta, SLIM y A2A para agente-a-agente, AGNTCY para la federación entre organizaciones. Los competidores adaptan los protocolos a posteriori; MeetLoyd se diseñó en torno a ellos.</p>
+          </div>
+          <div class="bg-slate-50 dark:bg-slate-800 p-6 rounded-lg">
+            <h3 class="text-lg font-semibold mb-2 text-slate-900 dark:text-white">Soberanía de datos</h3>
+            <p class="text-sm text-slate-600 dark:text-slate-400">Aporte sus propias claves y su propio almacenamiento. Cifrado gestionado por el cliente (CMEK) y almacenamiento propiedad del cliente (BYOS): los datos sensibles nunca tienen que tocar la infraestructura de la plataforma.</p>
+          </div>
+        </div>
+
+        <h2 class="text-2xl font-bold mt-12 mb-4">Diseñada para compradores regulados y de alta confianza</h2>
+        <p>Las grandes empresas no pueden operar con agentes de caja negra. Necesitan saber qué hacen los agentes, por qué y bajo qué restricciones. MeetLoyd lo hace estructural — con identidad de agente completa (IETF, SPIFFE, Credenciales Verificables, TBAC), autorización granular en cada llamada de herramienta, una pasarela LLM que gestiona la inyección de prompts y los datos personales, y un registro de auditoría encadenado por hash con exportación a SIEM.</p>
+        <p>El segmento prioritario son los sectores regulados y de alta confianza — servicios financieros, salud y cualquier empresa sujeta a la Ley de IA de la UE — junto con los <strong>integradores de sistemas y empresas de servicios IT</strong> que los atienden.</p>
+
+        <div class="mt-12 p-8 bg-slate-900 dark:bg-slate-950 rounded-lg text-center not-prose">
+          <h3 class="text-2xl font-bold mb-3 text-white">Ver la plataforma</h3>
+          <p class="mb-6 text-slate-300">Explore MeetLoyd, regístrese o reserve una prueba de concepto guiada.</p>
+          <a href="https://meetloyd.com" target="_blank" rel="noopener noreferrer" class="inline-block px-8 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors">
+            Ir a meetloyd.com
+          </a>
+        </div>
+      </div>
+    </div>
+  </article>
+</BaseLayout>

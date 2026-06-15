@@ -34,10 +34,30 @@ export function getLocalizedPath(path: string, lang: Lang): string {
   return lang === defaultLang ? `/${cleanPath}` : `/${lang}/${cleanPath}`;
 }
 
+// Resolve a (possibly localized) path back to its canonical English-key path,
+// so it can be re-localized into any other language.
+export function getCanonicalPath(path: string, fromLang: Lang): string {
+  const cleanPath = path.startsWith('/') ? path.slice(1) : path;
+
+  // Homepage
+  if (!cleanPath) return '/';
+
+  // Find the mapping whose slug for `fromLang` matches this path
+  for (const key in urlMappings) {
+    const mapping = urlMappings[key as keyof typeof urlMappings];
+    if (mapping[fromLang] === cleanPath) {
+      return `/${key}`;
+    }
+  }
+
+  // Not a translated slug (already canonical, or an unmapped page)
+  return `/${cleanPath}`;
+}
+
 export function getAlternateLinks(currentPath: string, currentLang: Lang) {
   const languages = Object.keys(ui) as Lang[];
 
-  // Remove language prefix from current path
+  // Remove language prefix, then resolve to the canonical path
   let basePath = currentPath;
   for (const lang of languages) {
     if (currentPath.startsWith(`/${lang}/`)) {
@@ -45,9 +65,10 @@ export function getAlternateLinks(currentPath: string, currentLang: Lang) {
       break;
     }
   }
+  const canonicalPath = getCanonicalPath(basePath, currentLang);
 
   return languages.map(lang => ({
     lang,
-    href: getLocalizedPath(basePath, lang)
+    href: getLocalizedPath(canonicalPath, lang)
   }));
 }
